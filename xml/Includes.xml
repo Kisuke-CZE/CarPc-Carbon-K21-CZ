@@ -143,7 +143,7 @@
 			<animation effect="fade" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 	</include>
-	<include name="Video">	
+	<include name="Navigation">	
 		<control type="group" id="4200">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
@@ -159,14 +159,14 @@
 				<height>150</height>				
 				<texturenofocus>home_1.png</texturenofocus>
 				<texturefocus border="5">home_1_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton1)">ActivateWindow(Videos)</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton1)">StartAndroidActivity(cz.seznam.mapy)</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton1)">$INFO[Skin.String(CustomActionButton1)]</onclick>
 			</control>
 			<include>IconButton1</include>
 			<include>LabelButton1</include>
 		</control>
 	</include>
-	<include name="Navigation">
+	<include name="Radio">
 		<control type="group" id="4220">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
@@ -181,14 +181,14 @@
 				<height>150</height>
 				<texturenofocus >home_2.png</texturenofocus>
 				<texturefocus border="5">home_2_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton2)">StartAndroidActivity("com.waze")</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton2)">StartAndroidActivity(com.microntek.radio)</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton2)">$INFO[Skin.String(CustomActionButton2)]</onclick>
 			</control>
 			<include>IconButton2</include>
 			<include>LabelButton2</include>
 		</control>
 	</include>
-	<include name="Radio">
+	<include name="Music">
 	  <control type="group" id="4240">  
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
@@ -203,7 +203,7 @@
 				<height>150</height>
 				<texturenofocus >home_3.png</texturenofocus>
 				<texturefocus border="5">home_3_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton3)">StartAndroidActivity("com.audioaddict.di")</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton3)">ActivateWindow(Music)</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton3)">$INFO[Skin.String(CustomActionButton3)]</onclick>
 			</control>
 			<include>IconButton3</include>
@@ -341,7 +341,7 @@
 			</control>
 		 </control>     
 	</include>
-	<include name="Music">
+	<include name="RandomAlbums">
 		<control type="group" id="4250">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>745r</posx>
@@ -358,7 +358,7 @@
 				<font>-</font>
 				<texturenofocus >home_4.png</texturenofocus>
 				<texturefocus border="5">home_4_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton4)">ActivateWindow(Music)</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton4)">ActivateWindow(Music,special://masterprofile/playlists/music/Nahodna alba.xsp)</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton4)">$INFO[Skin.String(CustomActionButton4)]</onclick>
 			</control>
 			<include>IconButton4</include>
@@ -389,7 +389,7 @@
 			<include>LabelButton5</include>
 		</control>
 	</include>
-	<include name="Shutdown">
+	<include name="Settings">
 		<control type="group" id="4270">
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>745r</posx>
@@ -408,7 +408,7 @@
 				<font>-</font>
 				<texturenofocus>home_6.png</texturenofocus>
 				<texturefocus border="5">home_6_p.png</texturefocus>
-				<onclick condition="!Skin.HasSetting(UseCustomActionButton6)">Shutdown</onclick>
+				<onclick condition="!Skin.HasSetting(UseCustomActionButton6)">StartAndroidActivity("","android.settings.SETTINGS")</onclick>
 				<onclick condition="Skin.HasSetting(UseCustomActionButton6)">$INFO[Skin.String(CustomActionButton6)]</onclick>
 			</control>
 			<include>IconButton6</include>
@@ -426,7 +426,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture colordiffuse="icons">video2.png</texture>
+				<texture colordiffuse="icons">navit_logo2.png</texture>
 				<visible>![Skin.HasSetting(UseCustomIcon1) + !IsEmpty(Skin.String(CustomIcon1Path))]</visible>
 			</control>
 			<control type="image">
@@ -448,7 +448,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture colordiffuse="icons">navit_logo2.png</texture>
+				<texture colordiffuse="icons">radio2.png</texture>
 				<visible>![Skin.HasSetting(UseCustomIcon2) + !IsEmpty(Skin.String(CustomIcon2Path))]</visible>
 			</control>
 			<control type="image">
@@ -471,7 +471,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture colordiffuse="icons">radio2.png</texture>
+				<texture colordiffuse="icons">music2.png</texture>
 				<visible>![Skin.HasSetting(UseCustomIcon3) + !IsEmpty(Skin.String(CustomIcon3Path))]</visible>
 			</control>
 			<control type="image">
@@ -494,7 +494,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture colordiffuse="icons">music2.png</texture>
+				<texture colordiffuse="icons">defaultmusicalbums.png</texture>
 				<visible>![Skin.HasSetting(UseCustomIcon4) + !IsEmpty(Skin.String(CustomIcon4Path))]</visible>
 			</control>
 			<control type="image">
@@ -540,7 +540,7 @@
 				<posy>25</posy>
 				<width>100</width>
 				<height>100</height>
-				<texture colordiffuse="icons">shut-down2.png</texture>
+				<texture colordiffuse="icons">icon_settings_system.png</texture>
 				<visible>![Skin.HasSetting(UseCustomIcon6) + !IsEmpty(Skin.String(CustomIcon6Path))]</visible>
 			</control>
 			<control type="image">
@@ -561,7 +561,7 @@
 				<posy>25</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Video</label>
+				<label>Navigace</label>
 				<aligny>center</aligny>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
@@ -585,7 +585,7 @@
 				<posy>25</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Navigation</label>
+				<label>Rádio</label>
 				<aligny>center</aligny>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
@@ -609,7 +609,7 @@
 				<posy>25</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Radio</label>
+				<label>Hudba</label>
 				<aligny>center</aligny>
 				<font>font50_title</font>
 				<textcolor>white</textcolor>
@@ -633,7 +633,7 @@
 				<posy>20</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Music</label>
+				<label>Náhodná alba</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
@@ -659,7 +659,7 @@
 				<posy>20</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Programs</label>
+				<label>Aplikace</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>
@@ -685,7 +685,7 @@
 				<posy>20</posy>
 				<height>100</height>
 				<width>350</width>
-				<label>Shutdown</label>
+				<label>Nastavení systému</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font50_title</font>

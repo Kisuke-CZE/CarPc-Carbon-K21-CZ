@@ -1,15 +1,6 @@
-# skin.CarPc-Carbon Kodi 19
+# skin.CarPc-Carbon Kodi 21 - CZ custom
 
-If you find some problems you can write me.
+This skin is fully based on [CarPc-Carbon-K19](https://github.com/araujorm/CarPc-Carbon-K19).
 
-The skin in action https://youtu.be/0peOkS6z_aU 
-
-
-[![](http://www.freeiconspng.com/uploads/youtube-subscribe-png-23.png)](https://www.youtube.com/user/idorel11?sub_confirmation=1)
-
-This skin is base on skin.estouchy
-
-If you like this skin you can by me a beer [![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AMXESTYHM96HN)
-
-
+It has Czech labels by default and actions on Home screen are customized to fit my usage on Isudar Android head unit! Nothing elese is changed. Also xbmc.gui is bumped to bee compatible with Kodi 21.
 

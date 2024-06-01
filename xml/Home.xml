@@ -27,9 +27,9 @@
 
 			<!--Meniu by me-->
 			
-		<include>Video</include>
 		<include>Navigation</include>
 		<include>Radio</include>
+		<include>Music</include>
 		<include>Logob</include>
 		<include>Logo</include>
 		<include>Visualisation</include>
@@ -41,9 +41,9 @@
 			<onclick>Skin.ToggleSetting(HideHomeVisualisation)</onclick>
 			<selected>Skin.HasSetting(HideHomeVisualisation)</selected>
 		</control>
-		<include>Music</include>
+		<include>RandomAlbums</include>
 		<include>Programs</include>
-		<include>Shutdown</include>
+		<include>Settings</include>
 		
 		<include>CommonBottomBar</include>
 		<include>MusicPlayerTitle</include>
